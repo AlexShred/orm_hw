@@ -31,4 +31,4 @@ class Publication(models.Model):
     date_published = models.DateField()
 
     def __str__(self):
-        return f'{self.author} - {self.article}'
+        return f'{self.author.name} - {self.article.title}'

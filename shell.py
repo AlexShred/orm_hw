@@ -28,9 +28,10 @@ nurs = Article.objects.filter(name__exact='Нурсултан')
 nurs
 oldfag = Author.objects.filter(date_register__lt='2022-10-10')
 oldfag
-pub_dict = Publication.values('author', 'article')
+publs = Publication.objects.all()
+pub_dict = publs.values('author', 'article')
 pub_dict
-pub_list = Publication.values_list('author', 'article')
+pub_list = publs.values_list('author', 'article')
 pub_list
 pub_b = Publication.objects.filter(name__contains='В')
 pub_b
